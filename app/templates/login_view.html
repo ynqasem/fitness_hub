@@ -1,0 +1,14 @@
+{%extends 'base.html' %}
+{%block content%}
+{% load crispy_forms_tags %}
+
+    <div class = "row" style = "background-color: #FFF;">
+        <div class = "box">
+            <div class="col-md-6 col-md-offset-4">
+
+                        {%crispy form%}
+
+            </div>
+        </div>
+    </div>
+{%endblock%}

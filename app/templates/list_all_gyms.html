@@ -1,0 +1,24 @@
+{%extends 'base.html' %}
+{%block content%}
+    <div class="container">
+        
+        {%for gym in gyms%}
+        <div class="row">
+            <div class="box">
+                <div class="col-lg-12">
+                    <hr>
+                    <h2 class="intro-text text-center">{{gym.gym_name}}</h2>
+                    <hr>
+                    <img class="img-responsive img-border intro-text text-center" src="/media/{{gym.logo}}" width = "400" alt="">
+                    <hr class="visible-xs">
+                    <br>
+                    <p class = "text-center" style= "color: purple;">Number:{{gym.number}}</p>
+                    <p class = "text-center" style= "color: purple;">Location:{{gym.location}}</p>
+                    <a href="/gym_details/{{gym.pk}}"><p class = "text-center" style= "color: purple;">More Details</p></a>
+                </div>
+            </div>
+        </div>
+        {%endfor%}
+
+    </div>
+{%endblock%}
